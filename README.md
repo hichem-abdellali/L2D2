@@ -2,7 +2,6 @@
 
 This repository contains the pre-trained network implementation of the following [paper](https://www.researchgate.net/publication/355340221_L2D2_Learnable_Line_Detector_and_Descriptor):
 
-it includes the the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
 
 ```text
 @inproceedings{l2d2,
@@ -13,18 +12,32 @@ it includes the the pre-trained detector/descriptor, the line extraction matlab 
 }
 ```
 
+the code includes the the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
+
 Getting started
 -----------------
-You just need a conda envirement with Python 3.8+
+You just need a conda environment with Python 3.8+
 ```
 conda env create -f l2d2.yml python=3.8
 ```
 for the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
-The code needs input images of 512x512 pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/)
+The code needs input images of 512x512 pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
+
+% run
+```
+> python main_inference_detector.py
+> matlab Line_extraction_heatmap.m
+> matlab Main_Patch_creation.m
+> python main_Inference_descriptor.py
+```
+
+1. `main_inference_detector.py` loads the images from the folder `INPUT_IMAGES` and provides a heatmap of *512x512* for each input image saved in HEATMAPS_DIR
+2. `line_extraction_heatmap.m` loads the heatmaps from `HEATMAPS_DIR` and provides the detected lines in a .MAT file EXTRACTED_LINES
+3. `main_Patch_creation.m` reads the lines from the folder `EXTRACTED_LINES` of each image folder and provide a patch of *48x32* for each 2D line, the patches are stored in `EXTRACTED_PATCHES`
+4. `main_Inference_descriptor.py` loads the patches from the folder `EXTRACTED_PATCHES and provides the descriptor in DESCRIPTORS
 
 
-
-Pretrained models Getting started
+Pretrained models
 -----------------
 We provided the pre-trained models in the `IN_OUT_DATA/INPUT_NETWEIGHT/` folder:
  - `checkpoint_line_detector.pth.tar`: this is the pre-trained model for the line detector.
