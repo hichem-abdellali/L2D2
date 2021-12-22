@@ -12,28 +12,30 @@ This repository contains the pre-trained network implementation of the following
 }
 ```
 
-the code includes the the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
+The code includes the the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
 
 Getting started
 -----------------
 You just need a conda environment with Python 3.8+
+
 ```
 conda env create -f l2d2.yml python=3.8
 ```
-for the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
+
+For the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
 The code needs input images of 512x512 pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
 
-% run
+% to obtain the detected lines and the descriptor for each line please run the follwing intrsuctions
 ```
 > python main_inference_detector.py
-> matlab Line_extraction_heatmap.m
-> matlab Main_Patch_creation.m
+>> line_extraction_heatmap.m  (matlab code)
+>> main_Patch_creation.m (matlab code)
 > python main_Inference_descriptor.py
 ```
 
-1. `main_inference_detector.py` loads the images from the folder `INPUT_IMAGES` and provides a heatmap of *512x512* for each input image saved in HEATMAPS_DIR
-2. `line_extraction_heatmap.m` loads the heatmaps from `HEATMAPS_DIR` and provides the detected lines in a .MAT file EXTRACTED_LINES
-3. `main_Patch_creation.m` reads the lines from the folder `EXTRACTED_LINES` of each image folder and provide a patch of *48x32* for each 2D line, the patches are stored in `EXTRACTED_PATCHES`
+1. `main_inference_detector.py` loads the images from the folder `INPUT_IMAGES` and provides a heatmap of *512x512* for each input image in HEATMAPS_DIR
+2. `line_extraction_heatmap.m` loads the heatmaps from `HEATMAPS_DIR` and provides the detected lines in a `.mat` file in the EXTRACTED_LINES folder
+3. `main_Patch_creation.m` reads the lines from the folder `EXTRACTED_LINES` of each image and provides a patch of *48x32* for each 2D line, the patches are stored in the `EXTRACTED_PATCHES` folder
 4. `main_Inference_descriptor.py` loads the patches from the folder `EXTRACTED_PATCHES and provides the descriptor in DESCRIPTORS
 
 
@@ -45,5 +47,7 @@ We provided the pre-trained models in the `IN_OUT_DATA/INPUT_NETWEIGHT/` folder:
 
 
 
-Please cite publication whenever you use the implementation:  
+
+
+Please cite this publication whenever you use the implementation:  
 *H.Abdellali*, *R.Frohlich*, *V.Vilagos*, *Z.Kato*, *Learnable Line Detector and Descriptor*, *IEEE International Conference on 3D Vision (3DV)*, *2021*
