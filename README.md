@@ -2,7 +2,7 @@
 
 This repository contains the pre-trained network implementation of the following [paper](https://www.researchgate.net/publication/355340221_L2D2_Learnable_Line_Detector_and_Descriptor):
 
-
+Please cite this publication whenever you use the implementation:  
 ```text
 @inproceedings{l2d2,
   author    = {Hichem Abdellali, Robert Frohlich, Viktor Vilagos, Zoltan Kato},
@@ -19,11 +19,11 @@ Getting started
 You just need a conda environment with Python 3.8+
 
 ```
-conda env create -f l2d2.yml python=3.8
+conda env create -f l2d2.yml python=3.7.9
 ```
 
 For the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
-The code needs input images of 512x512 pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
+The code needs input images of *512x512* pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
 
 % to obtain the detected lines and the descriptor for each line please run the follwing instructions
 ```
