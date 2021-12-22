@@ -8,6 +8,7 @@ Please cite this publication whenever you use the implementation:
   author    = {Hichem Abdellali, Robert Frohlich, Viktor Vilagos, Zoltan Kato},
   title     = {{L2D2:} Learnable Line Detector and Descriptor},
   booktitle = {IEEE International Conference on 3D Vision (3DV)},
+  address      = {{United kingdom, London} (online)},  
   year      = {2021},
 }
 ```
@@ -33,10 +34,10 @@ The code needs input images of *512x512* pixels (an example is provided inside `
 (l2d2) > python main_Inference_descriptor.py
 ```
 
-1. `main_inference_detector.py` loads the images from the folder `INPUT_IMAGES` and provides a heatmap of *512x512* for each input image in HEATMAPS_DIR
-2. `line_extraction_heatmap.m` loads the heatmaps from `HEATMAPS_DIR` and provides the detected lines in a `.mat` file in the EXTRACTED_LINES folder
-3. `main_Patch_creation.m` reads the lines from the folder `EXTRACTED_LINES` of each image and provides a patch of *48x32* for each 2D line, the patches are stored in the `EXTRACTED_PATCHES` folder
-4. `main_Inference_descriptor.py` loads the patches from the folder `EXTRACTED_PATCHES and provides the descriptor in DESCRIPTORS
+1. `main_inference_detector.py` located inside `1_Pre_trained_detector`: loads the images from the folder `INPUT_IMAGES` and provides a heatmap of *512x512* for each input image in HEATMAPS_DIR
+2. `line_extraction_heatmap.m` located inside `2_Line_extraction`: loads the heatmaps from `HEATMAPS_DIR` and provides the detected lines in a `.mat` file in the EXTRACTED_LINES folder
+3. `main_Patch_creation.m` located inside `3_Patch_extraction`: reads the lines from the folder `EXTRACTED_LINES` of each image and provides a patch of *48x32* for each 2D line, the patches are stored in the `EXTRACTED_PATCHES` folder
+4. `main_Inference_descriptor.py` located inside `4_Pre_trained_descriptor`: loads the patches from the folder `EXTRACTED_PATCHES and provides the descriptor in DESCRIPTORS
 
 
 Pretrained models
@@ -46,8 +47,3 @@ We provided the pre-trained models in the `IN_OUT_DATA/INPUT_NETWEIGHT/` folder:
  - `checkpoint_line_descriptor.th`: this is the pre-trained model for the line descriptor.
 
 
-
-
-
-Please cite this publication whenever you use the implementation:  
-H Abdellali, R Frohlich, V Vilagos, Z Kato. *Learnable Line Detector and Descriptor*, *IEEE International Conference on 3D Vision (3DV)*. London, UK (online) *2021*
