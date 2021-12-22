@@ -25,12 +25,12 @@ conda env create -f l2d2.yml python=3.8
 For the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
 The code needs input images of 512x512 pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
 
-% to obtain the detected lines and the descriptor for each line please run the follwing intrsuctions
+% to obtain the detected lines and the descriptor for each line please run the follwing instructions
 ```
-> python main_inference_detector.py
+(l2d2) > python main_inference_detector.py
 >> line_extraction_heatmap.m  (matlab code)
 >> main_Patch_creation.m (matlab code)
-> python main_Inference_descriptor.py
+(l2d2) > python main_Inference_descriptor.py
 ```
 
 1. `main_inference_detector.py` loads the images from the folder `INPUT_IMAGES` and provides a heatmap of *512x512* for each input image in HEATMAPS_DIR
