@@ -21,8 +21,7 @@ import argparse
 import numpy as np
 from torch.autograd import Variable
 import torchvision.transforms as transforms
-from functions.Utils import cv2_scale, np_reshape
-from RAL_net_cov import get_L2_conv
+from RAL_net_cov import get_net
 
 parser = argparse.ArgumentParser(description='L2D2 inference code')
 
@@ -43,7 +42,11 @@ def get_descriptors(weights_path, Patches_location , Output_location):
     # --------------------------------------------------------------------------------------------------------
     # ----------------------------------------- LOAD THE NETWORK WEIGHTS -------------------------------------
     # --------------------------------------------------------------------------------------------------------
-    model = torch.load(weights_path).cuda()
+    if os.path.isfile(weights_path):
+        model = torch.load(weights_path).cuda()
+    else:
+        print("=> no checkpoint found at '{}'".format(weights_path))
+        return
     # set the model to evaluation mode
     model.eval()
 

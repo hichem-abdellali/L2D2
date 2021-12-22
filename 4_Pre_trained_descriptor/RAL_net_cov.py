@@ -1,8 +1,17 @@
 from __future__ import division, print_function
 import torch
 import torch.nn.init
-from functions.Utils import L2Norm, cv2_scale, np_reshape
 import torch.nn as nn
+
+class L2Norm(nn.Module):
+    def __init__(self):
+        super(L2Norm,self).__init__()
+        self.eps = 1e-10
+    def forward(self, x):
+        norm = torch.sqrt(torch.sum(x * x, dim = 1) + self.eps)
+        x= x / norm.unsqueeze(-1).expand_as(x)
+        return x
+
 
 class L2Net(nn.Module):
     def __init__(self):
@@ -56,5 +65,5 @@ def weights_init(m):
             pass
     return
 
-def get_L2_conv():
+def get_net():
     return L2Net()
