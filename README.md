@@ -16,7 +16,7 @@ The code includes the the pre-trained detector/descriptor, the line extraction m
 
 Getting started
 -----------------
-You just need a conda environment with Python 3.8+
+You just need a conda environment with Python 3.7.9
 
 ```
 conda env create -f l2d2.yml python=3.7.9
