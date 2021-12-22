@@ -12,7 +12,7 @@ Please cite this publication whenever you use the implementation:
 }
 ```
 
-The code includes the the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
+The code includes the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
 
 Getting started
 -----------------
@@ -50,4 +50,4 @@ We provided the pre-trained models in the `IN_OUT_DATA/INPUT_NETWEIGHT/` folder:
 
 
 Please cite this publication whenever you use the implementation:  
-*H.Abdellali*, *R.Frohlich*, *V.Vilagos*, *Z.Kato*, *Learnable Line Detector and Descriptor*, *IEEE International Conference on 3D Vision (3DV)*, *2021*
+H Abdellali, R Frohlich, V Vilagos, Z Kato. *Learnable Line Detector and Descriptor*, *IEEE International Conference on 3D Vision (3DV)*. London, UK (online) *2021*
