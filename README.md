@@ -13,7 +13,8 @@ Please cite this publication whenever you use the implementation:
 }
 ```
 
-The code includes the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
+The code includes the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code.
+
 For the Matlab code, the Package contains all the necessary functions.
 
 Getting started
