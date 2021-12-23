@@ -20,7 +20,7 @@ Getting started
 You just need a conda environment with Python 3.7.9
 
 ```
-conda env create -f l2d2.yml python=3.7.9
+conda env create -f l2d2.yml
 ```
 
 For the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
