@@ -13,7 +13,7 @@ Please cite this publication whenever you use the implementation:
 }
 ```
 
-The repository includes the full L2D2 pipline which includes: the pre-trained detector/descriptor python code, the line extraction matlab code and the patch creation matlab code.
+The repository contains the full L2D2 pipline which includes: the pre-trained detector/descriptor python code, the line extraction matlab code and the patch creation matlab code.
 
 For the Matlab code, the Package contains all the necessary functions.
 
