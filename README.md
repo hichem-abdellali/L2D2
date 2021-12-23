@@ -27,7 +27,7 @@ conda env create -f l2d2.yml
 
 The full L2D2 pipeline needs input images of *512x512* pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
 
-To obtain the detected lines and the descriptor for each line please run the follwing instructions
+To obtain the detected lines and the descriptors, run the 4 programs which compose the full L2D2 pipeline in the following orders 
 ```
 (l2d2) > python main_inference_detector.py
 >> line_extraction_heatmap.m  (matlab code)
