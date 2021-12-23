@@ -48,3 +48,4 @@ We provided the pre-trained models in the `IN_OUT_DATA/INPUT_NETWEIGHT/` folder:
  - `checkpoint_line_descriptor.th`: this is the pre-trained model for the line descriptor.
 
 
+NOTE: the detector/descriptor training code and the training data generation code will be released later
