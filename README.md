@@ -14,6 +14,7 @@ Please cite this publication whenever you use the implementation:
 ```
 
 The code includes the pre-trained detector/descriptor, the line extraction matlab code and the patch creation matlab code
+For the Matlab code, the Package contains all the necessary functions.
 
 Getting started
 -----------------
@@ -23,8 +24,7 @@ You just need a conda environment with Python 3.7.9
 conda env create -f l2d2.yml
 ```
 
-For the Matlab code, it does not require any installation, the Package contains all the necessary functions. 
-The code needs input images of *512x512* pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
+The full L2D2 code needs input images of *512x512* pixels (an example is provided inside `IN_OUT_DATA/INPUT_IMAGES/`)
 
 To obtain the detected lines and the descriptor for each line please run the follwing instructions
 ```
